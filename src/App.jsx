@@ -3,6 +3,7 @@ import React from 'react'
 import Header from './components/Header/Header'
 import Body from './components/Header/Body/Body'
 
+
 import './App.css'
 
 
@@ -36,6 +37,7 @@ function App() {
       
         <Header/>
         <Body/>
+      
     </>
   
   );
