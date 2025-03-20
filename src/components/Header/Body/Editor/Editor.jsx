@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import styles from './Editor.module.css';
+import Inputcontrol from "./inputcontrol/inputcontrol";
 
 function Editor(props) {
 
@@ -25,6 +26,10 @@ function Editor(props) {
             {sections[key]}
           </div>
         ))}
+            </div>
+            <div className={styles.body}>
+
+              <Inputcontrol/>
             </div>
         </div>
     )
