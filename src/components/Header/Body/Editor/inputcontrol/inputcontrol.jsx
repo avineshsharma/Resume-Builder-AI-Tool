@@ -3,7 +3,7 @@ import React from "react";
 
 import styles from "./InputControl.module.css";
 
-function InputControl({ label, ...props }) {
+function Inputcontrol({ label, ...props }) {
   return (
     <div className={styles.container}>
       {label && <label>{label}</label>}
@@ -12,4 +12,4 @@ function InputControl({ label, ...props }) {
   );
 }
 
-export default InputControl;
+export default Inputcontrol;

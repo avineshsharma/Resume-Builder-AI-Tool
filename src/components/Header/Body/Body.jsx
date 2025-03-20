@@ -12,7 +12,7 @@ function Body() {
         basicInfo: "Basic Info",
         workExp: "Work Experience",
         project: "Projects",
-        education: "Education",
+       Education: "Education",
         achievement: "Achievements",
         summary: "Summary",
         other: "Other",
