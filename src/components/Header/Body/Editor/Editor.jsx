@@ -12,7 +12,55 @@ function Editor(props) {
     Object.keys(sections)[0]
   );
 
-  const workExBody = <div className={styles.detail}>
+  const basicInfoBody = (
+    <div className={styles.detail}>
+      <div className={styles.row}>
+        <Inputcontrol
+          label="Name"
+          placeholder="Enter your full name eg. Avinesh"
+        // value={values.name}
+        />
+
+        <Inputcontrol
+          label="Title"
+          // value={values.title}
+          placeholder="Enter your title eg. Frontend developer"
+        />
+      </div>
+      <div className={styles.row}>
+        <Inputcontrol
+          label="Linkedin Link"
+          placeholder="Enter your linkedin profile link"
+
+        />
+        <Inputcontrol
+        label="Github-Link "
+        placeholder ="Enter your git-hub profile "
+        />
+      </div>
+      <div className={styles.row}>
+        <Inputcontrol
+          label="Email"
+          // value={values.email}
+          placeholder="Enter your email"
+          // onChange={(event) =>
+          //   setValues((prev) => ({ ...prev, email: event.target.value }))
+          // }
+        />
+        <Inputcontrol
+          label="Enter phone"
+          // value={values.phone}
+          placeholder="Enter your phone number"
+          // onChange={(event) =>
+          //   setValues((prev) => ({ ...prev, phone: event.target.value }))
+          // }
+        />
+      </div>
+
+    </div >
+  );
+
+  const workExpBody = <div className={styles.detail}>
     <div className={styles.row}>
       <Inputcontrol
         label="Title"
@@ -56,31 +104,163 @@ function Editor(props) {
   </div>;
 
 
-  const basicInfoBody = (
+  const projectBody = (
     <div className={styles.detail}>
       <div className={styles.row}>
         <Inputcontrol
-          label="Name"
-          placeholder="Enter your full name eg. Aashu"
-          // value={values.name}
+          label="Title"
+          // value ={value.title}
+          placeholder="Enter title eg. chat App"
         />
 
+      </div>
+      <Inputcontrol
+        label="Overview"
+        placeholder="Enter basic overview of project"
+      />
+      <div className={styles.row}>
+        <Inputcontrol
+          label="Deployed Link"
+          placeholder="Enter deployed link of project"
+        />
+
+        <Inputcontrol
+          label="Git-Hub Link"
+          placeholder="Enter git-hub link of project"
+        />
+      </div>
+      <div className={styles.column}>
+        <label>Enter project description</label>
+        <Inputcontrol
+          placeholder="Line 1"
+        // value={values.points ? values.points[0] : ""}
+        // onChange={(event) => handlePointUpdate(event.target.value, 0)}
+        />
+        <Inputcontrol
+          placeholder="Line 2"
+        // value={values.points ? values.points[1] : ""}
+        // onChange={(event) => handlePointUpdate(event.target.value, 1)}
+        />
+        <Inputcontrol
+          placeholder="Line 3"
+        // value={values.points ? values.points[2] : ""}
+        // onChange={(event) => handlePointUpdate(event.target.value, 2)}
+        />
+        <Inputcontrol
+          placeholder="Line 4"
+        // value={values.points ? values.points[3] : ""}
+        // onChange={(event) => handlePointUpdate(event.target.value, 3)}
+        />
+      </div>
+
+    </div>
+  )
+
+  // const education = (
+  //   <div className={styles.detail}>
+  //     <div className={styles.row}>
+  //       <Inputcontrol
+  //         label="Title"
+  //         // value = {value.title}
+  //         placeholder="Enter title eg.BCA"
+  //       />
+  //     </div>
+  //     <Inputcontrol
+  //       label="College/School Name"
+  //       placeholder="Enter name of your college/school"
+  //     />
+  //   </div>
+  // )
+
+  const educationBody = (
+    <div className={styles.detail}>
+      <div className={styles.row}>
         <Inputcontrol
           label="Title"
           // value={values.title}
-          placeholder="Enter your title eg. Frontend developer"
-        />
-      </div>
-      <div className={styles.row}>
-        <Inputcontrol
-        label="Linkedi Link"
-        placeholder ="Enter your linkedin profile link"
+          placeholder="Enter title eg. B-tech"
 
         />
       </div>
-      
-    </div >
+      <Inputcontrol
+        label="College/School Name"
+        // value={values.college}
+        placeholder="Enter name of your college/school"
+
+      />
+      <div className={styles.row}>
+        <Inputcontrol
+          label="Start Date"
+          type="date"
+          placeholder="Enter start date of this education"
+
+        />
+        <Inputcontrol
+          label="End Date"
+          type="date"
+          placeholder="Enter end date of this education"
+        // value={values.endDate}
+
+        />
+      </div>
+    </div>
   );
+
+
+
+  const achievementsBody = (
+    <div className={styles.detail}>
+      <div className={styles.column}>
+        <label>List your achievements</label>
+        <Inputcontrol
+          placeholder="Line 1"
+        // value={values.points ? values.points[0] : ""}
+        // onChange={(event) => handlePointUpdate(event.target.value, 0)}
+        />
+        <Inputcontrol
+          placeholder="Line 2"
+        // value={values.points ? values.points[1] : ""}
+        // onChange={(event) => handlePointUpdate(event.target.value, 1)}
+        />
+        <Inputcontrol
+          placeholder="Line 3"
+        // value={values.points ? values.points[2] : ""}
+        // onChange={(event) => handlePointUpdate(event.target.value, 2)}
+        />
+        <Inputcontrol
+          placeholder="Line 4"
+        // value={values.points ? values.points[3] : ""}
+        // onChange={(event) => handlePointUpdate(event.target.value, 3)}
+        />
+      </div>
+    </div>
+  );
+
+
+  const summaryBody = (
+    <div className={styles.detail}>
+      <Inputcontrol
+        label="Summary"
+        // value={values.summary}
+        placeholder="Enter your objective/summary"
+        
+      />
+    </div>
+  );
+  const otherBody = (
+    <div className={styles.detail}>
+      <Inputcontrol
+        label="Other"
+        // value={values.other}
+        placeholder="Enter something"
+       
+      />
+    </div>
+  );
+
+
+
+
 
   const generateBody = () => {
     switch (sections[activeSectionKey]) {
