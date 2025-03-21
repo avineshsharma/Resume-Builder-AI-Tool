@@ -8,7 +8,7 @@ import styles from "./Body.module.css";
 
 function Body() {
     const colors = ["#239ce2", "#48bb78", "#0bc5ea", "#a0aec0", "#ed8936"];
-    const sections={
+    const sections = {
         basicInfo: "Basic Info",
         workExp: "Work Experience",
         project: "Projects",
@@ -29,33 +29,33 @@ function Body() {
         [sections.workExp]: {
             id: sections.workExp,
             sectionsTitle: sections.workExp,
-            details: {},
+            details: [],
         },
 
 
         [sections.project]: {
             id: sections.project,
             sectionsTitle: sections.project,
+            details: [],
+        },
+
+        [sections.Education]: {
+            id: sections.Education,
+            sectionsTitle: sections.Education,
             details: {},
         },
 
-        [sections.Education]:{
-            id: sections.Education,
-            sectionsTitle:sections.Education,
-            details:{},
-        },
-
-        [sections.summary]:{
+        [sections.summary]: {
             id: sections.summary,
-            sectionsTitle:sections.summary,
-            details:{},
+            sectionsTitle: sections.summary,
+            details: [],
         },
 
 
-        [sections.other]:{
+        [sections.other]: {
             id: sections.other,
-            sectionsTitle:sections.other,
-            details:{},
+            sectionsTitle: sections.other,
+            details: [],
         },
     })
     return (
@@ -76,7 +76,10 @@ function Body() {
                 </button>
             </div>
             <div className={styles.main}>
-                <Editor sections={sections} inforomation={resumeInformation} />
+                <Editor sections={sections} inforomation={resumeInformation}
+
+                    setInformation={setResumeInformation}
+                />
             </div>
 
         </div>
