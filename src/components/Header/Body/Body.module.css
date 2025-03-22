@@ -5,38 +5,38 @@
     align-items: center;
     gap: 30px;
     padding-top: 0;
-
-}
-
-.heading {
-    font-weight: bold;
+  }
+  
+  .heading {
+    font-weight: 500;
     font-size: 2.1rem;
-
-}
-
-.toolbar{
+  }
+  
+  .toolbar {
     width: 100%;
     display: flex;
     gap: 40px;
     justify-content: space-between;
     align-items: center;
-}
-
-.colors{
+  }
+  
+  .colors {
     display: flex;
     gap: 20px;
     padding: 0 30px;
-
-}
-
-.colors .color{
+  }
+  
+  .colors .color {
     height: 36px;
     width: 36px;
     border-radius: 50%;
-    border-color: #239ce2;
-}
-
-.toolbar button {
+    background-color: #239ce2;
+  }
+  .colors .active {
+    border: 2px solid #000;
+  }
+  
+  .toolbar button {
     padding: 8px 16px;
     border-radius: 5px;
     background-color: #239ce2;
@@ -45,14 +45,14 @@
     border: none;
     font-weight: 500;
     font-size: 1rem;
-    letter-spacing:1px;
+    letter-spacing: 1px;
     display: flex;
-  gap: 5px;
-  align-items: center;
-  cursor: pointer;
-}
-
-.toolbar button svg {
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .toolbar button svg {
     height: 20px;
     width: 20px;
   }
