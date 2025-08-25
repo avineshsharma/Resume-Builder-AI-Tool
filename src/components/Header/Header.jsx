@@ -20,7 +20,7 @@ function Header() {
                 <img src={resumesvg} alt="resume" />
             </div>
         </div>
-        {/* <h1>working</h1> */}
+        
     </>
     );
 }
