@@ -2,7 +2,7 @@ import React from "react";
 
 import resumesvg from "../../assets/resume.svg";
 
-import styles from './Header.module.css'
+import styles from './header.module.css'
 
 function Header() {
     return (
