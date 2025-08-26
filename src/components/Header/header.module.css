@@ -1,3 +1,9 @@
+/* Header.module.css */
+.header {
+  /* Add your styles here */
+  display: flex;
+}
+
 .container {
     padding: 50px 30px;
     text-align: center;
